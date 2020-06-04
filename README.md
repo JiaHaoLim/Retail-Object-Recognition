@@ -22,5 +22,5 @@ Interactive Google Colab Version: [ROR](https://colab.research.google.com/drive/
     
 ## Usage:
   Input `python main.py CONFIG_FILE.yml`\
-  A config guide as well as sample configs have been provided in `configs/`.\
-  The config folder can be changed in `main.py`
+  A configuration guide as well as sample configurations have been provided in `configs/`\
+  The configuration folder can be changed in `main.py`
