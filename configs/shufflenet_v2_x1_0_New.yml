@@ -1,0 +1,35 @@
+filepaths:
+  model_path: models/
+  data_paths:
+    train: train2019/
+    val: val2019/
+    test: test2019/
+  cropped_paths: 
+    train: cropped_data/train/
+    val: cropped_data/val/
+    test: cropped_data/test/
+  instances_paths:
+    train: instances_train2019.json
+    val: instances_val2019.json
+    test: instances_test2019.json
+  verify_progress_paths:
+    train: progress_train.json
+    val: progress_val.json
+    test: progress_test.json
+mode: train
+crop_options:
+  dataset_choice: all
+verify_options:
+  dataset_choice: all
+  remove_extra: True
+  reverify: False
+  verify_save_step: 5000
+train_test_options:
+  model_name: shufflenet_v2_x1_0
+  pretrained: True
+  load_choice: -1
+  num_epochs: 20
+  batch_size: 16
+  image_size: 256
+  num_workers: 32
+  use_num_worker_multiplier: True

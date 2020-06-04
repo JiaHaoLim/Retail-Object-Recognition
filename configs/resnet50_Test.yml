@@ -1,0 +1,36 @@
+filepaths:
+  models_path: models/
+  data_paths:
+    train: 
+    val: 
+    test: 
+  cropped_paths: 
+    train: 
+    val: 
+    test: cropped_data/test/
+  instances_paths:
+    train: 
+    val: 
+    test: 
+  verify_progress_paths:
+    train: 
+    val: 
+    test: 
+mode: test
+crop_options:
+  dataset_choice: 
+verify_options:
+  dataset_choice: 
+  remove_extra: 
+  reset_progress: 
+  verify_save_step: 
+  crop_missing: 
+train_test_options:
+  model_name: resnet50
+  load_choice: -1
+  pretrained: 
+  num_epochs: 
+  batch_size: 16
+  image_size: 256
+  num_workers: 32
+  use_num_worker_mult: True

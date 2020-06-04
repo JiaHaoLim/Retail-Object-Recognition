@@ -1,0 +1,70 @@
+filepaths:
+  models_path: models/                  # Saved model output path to be created by code.
+  data_paths:
+    train: train2019/                   # REQUIRED data path.
+    val: val2019/                       # REQUIRED data path.
+    test: test2019/                     # REQUIRED data path.
+  cropped_paths: 
+    train: cropped_data/train/          # Image cropping output path to be created by code.
+    val: cropped_data/val/              # Image cropping output path to be created by code.
+    test: cropped_data/test/            # Image cropping output path to be created by code.
+  instances_paths:
+    train: instances_train2019.json     # REQUIRED instances file.
+    val: instances_val2019.json         # REQUIRED instances file.
+    test: instances_test2019.json       # REQUIRED instances file.
+  verify_progress_paths:
+    train: progress_train.json          # Verification progress file to be created by code.
+    val: progress_val.json              # Verification progress file to be created by code.
+    test: progress_test.json            # Verification progress file to be created by code.
+mode: train                             # Valid choices for mode: [crop, verify, train, test, plot]
+crop_options:
+  dataset_choice: all                   # Valid choices for cropping: [train, val, test, all]
+verify_options:
+  dataset_choice: all                   # Valid choices for verification: [train, val, test, all]
+  remove_extra: BOOLEAN                 # True to remove extra cropped files not unexpected in instances_DATATYPE.json.
+  reset_progress: BOOLEAN               # True to verify from scratch, False is verify from last saved progress.
+  verify_save_step: INTEGER             # Number of images to verify before saving progress. Any positive integer is accepted.
+  crop_missing: BOOLEAN                 # True to automatically crop missing/removed images.
+train_test_options:
+  model_name: STRING                    # Valid model names: ["alexnet",
+                                                              "vgg11",
+                                                              "vgg11_bn",
+                                                              "vgg13",
+                                                              "vgg13_bn",
+                                                              "vgg16",
+                                                              "vgg16_bn",
+                                                              "vgg19",
+                                                              "vgg19_bn",
+                                                              "resnet18",
+                                                              "resnet34",
+                                                              "resnet50",
+                                                              "resnet101",
+                                                              "resnet152",
+                                                              "squeezenet1_0",
+                                                              "squeezenet1_1",
+                                                              "densenet121",
+                                                              "densenet161",
+                                                              "densenet169",
+                                                              "densenet201",
+                                                              "inception_v3",
+                                                              "googlenet",
+                                                              "shufflenet_v2_x0_5",
+                                                              "shufflenet_v2_x1_0",
+                                                              "shufflenet_v2_x1_5",
+                                                              "shufflenet_v2_x2_0",
+                                                              "resnext50_32x4d",
+                                                              "resnext101_32x8d",
+                                                              "wide_resnet50_2",
+                                                              "wide_resnet101_2",
+                                                              "mobilenet_v2",
+                                                              "ResNeXt-101-32x8d"]
+  load_choice: INTEGER                  # Assumes that each model is named EPOCH_NUM.pth
+  pretrained: BOOLEAN                   # True for pretrained model, False for untrained model
+                                        # For Training, -1 or lesser to train the model from scratch, 0 or greater for loading a saved model. E.g. 2 for loading 2.pth 
+                                        # For Testing, -1 or lesser to test using the highest accuracy model, 0 or greater for loading a saved model. E.g. 2 for loading 2.pth 
+                                            ## Requires saved accuracy .txt files
+  num_epochs: INTEGER                   # Number of epochs. Any positive integer is accepted.
+  batch_size: INTEGER                   # Batch size. Any positive integer is accepted.Decrease if running out of memory.
+  image_size: INTEGER                   # Image size. Any positive integer is accepted.
+  num_workers: INTEGER                  # Number of workers. Usually some multiple of CPU cores. Any positive integer is accepted.
+  use_num_worker_mult: BOOLEAN    # If False, number of workers = num_workers. If True, number of workers = num_workers times number of CPU cores.

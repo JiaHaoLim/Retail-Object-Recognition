@@ -1,0 +1,36 @@
+filepaths:
+  model_path:
+  data_paths:
+    train: train2019/
+    val: val2019/
+    test: test2019/
+  cropped_paths: 
+    train: cropped_data/train/
+    val: cropped_data/val/
+    test: cropped_data/test/
+  instances_paths:
+    train: instances_train2019.json
+    val: instances_val2019.json
+    test: instances_test2019.json
+  verify_progress_paths:
+    train: progress_train.json
+    val: progress_val.json
+    test: progress_test.json
+mode: verify
+crop_options: 
+  dataset_choice: 
+verify_options: 
+  dataset_choice: all
+  remove_extra: True
+  reset_progress: False
+  verify_save_step: 5000
+  crop_missing: False
+train_test_options:
+  model_name: 
+  load_choice: 
+  pretrained: 
+  num_epochs: 
+  batch_size: 
+  image_size: 
+  num_workers: 
+  use_num_worker_mult: 
