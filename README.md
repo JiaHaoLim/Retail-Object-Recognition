@@ -1,7 +1,7 @@
 # Retail-Object-Recognition
 The primary purpose of this repository is to train multiple different models on the [RPC(Retail Product Checkout)](https://rpc-dataset.github.io/) dataset.\
 The intention is to allow you to compare the Testing results of each model after training on the RPC dataset.\
-Interactive Google Colab Version: [ROR](https://colab.research.google.com/drive/1LS9oUxVPts0rza-HT5aAGbUCATTnn9Mh?usp=sharing)
+Interactive Google Colab Version available at: [ROR](https://colab.research.google.com/drive/1LS9oUxVPts0rza-HT5aAGbUCATTnn9Mh?usp=sharing)
 
 ## Repository Features 
   Crop images from the RPC dataset.\
