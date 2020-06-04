@@ -24,3 +24,6 @@ Interactive Google Colab Version available at: [ROR](https://colab.research.goog
   Input `python main.py CONFIG_FILE.yml`\
   A configuration guide as well as sample configurations have been provided in `configs/`\
   The configuration folder can be changed in `main.py`
+
+## Credits:
+  train.py was made following the tutorial on [PyTorch Finetuning Torchvision Models](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
