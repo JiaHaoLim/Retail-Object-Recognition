@@ -22,12 +22,13 @@ crop_options:
 verify_options:
   dataset_choice: all
   remove_extra: True
-  reverify: False
+  reset_progress: False
   verify_save_step: 5000
+  crop_missing: 
 train_test_options:
   model_name: shufflenet_v2_x1_0
-  pretrained: True
   load_choice: -1
+  pretrained: True
   num_epochs: 20
   batch_size: 16
   image_size: 256
