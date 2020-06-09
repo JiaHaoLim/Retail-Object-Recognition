@@ -75,11 +75,11 @@ def driver(yaml_path):
             elif configs['mode'] == "verify":
                 selected_type = configs['verify_options']['dataset_choice']
                 if selected_type in data_types:
-                    image_preprocessor.file_num_compare(instance_paths[selected_type], cropped_paths[selected_type], selected_type, 
+                    image_preprocessor.file_num_compare(instance_paths[selected_type], data_paths[selected_type], cropped_paths[selected_type], selected_type, 
                                                         configs['verify_options']['remove_extra'], configs['verify_options']['crop_missing'])
                 elif selected_type == "all":
                     for each in data_types:
-                        image_preprocessor.file_num_compare(instance_paths[each], cropped_paths[each], each, 
+                        image_preprocessor.file_num_compare(instance_paths[each], data_paths[each], cropped_paths[each], each, 
                                                             configs['verify_options']['remove_extra'], configs['verify_options']['crop_missing'])
                 else:
                     print("Unexpected error in configs['verify_options']['dataset_choice'], this should have been caught by config_checker!")
