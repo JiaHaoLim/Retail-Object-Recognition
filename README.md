@@ -25,5 +25,8 @@ Interactive Google Colab Version available at: [ROR](https://colab.research.goog
   A configuration guide as well as sample configurations have been provided in `configs/`\
   The configuration folder can be changed in `main.py`
 
+## Troubleshooting:
+  Errors related to `multiprocessing/*.py`: Try reducing the number of workers in the config .yml file.
+
 ## Credits:
   train.py was made following the tutorial on [PyTorch Finetuning Torchvision Models](https://pytorch.org/tutorials/beginner/finetuning_torchvision_models_tutorial.html)
